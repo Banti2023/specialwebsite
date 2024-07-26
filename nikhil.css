@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: #c24e4e34; /* Changed to black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  color: rgb(255, 255, 255);
+}
+
+.tag {
+  height: 80px;
+  width: 435px;
+  background: linear-gradient(rgb(214, 8, 8), rgb(146, 4, 146), rgb(209, 215, 23));
+  border-radius: 10px;
+  color: #697d0f;
+  font-family: helvetica;
+  line-height: 80px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 50px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-top: -50px;
+  box-shadow: 0 0 10px -3px #29a81e inset;
+}
+
+.container .tag:hover {
+  color: rgb(131, 223, 130);
+}
+
+.ribbon {
+  width: 100%;
+  height: 20px;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 0 10px -3px #333;
+}
+
+.tag a {
+  color: rgb(239, 231, 13);
+  text-decoration: none;
+}
+
+p {
+  position: absolute;
+  color: rgb(8, 0, 223);
+  bottom: 10%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+}
+
+.bubble-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Place behind other content */
+}
+
+.bubble {
+  position: absolute;
+  bottom: -50px;
+  border-radius: 50%;
+  animation: floatUp 10s infinite, grow 10s infinite;
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-size: cover; /* Ensure the image covers the bubble */
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(-100vh);
+  }
+  25% {
+    transform: translateY(-150vh);
+  }
+  50% {
+    transform: translateY(50vh);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(2);
+  }
+  50% {
+    transform: translateY(-100vh);
+  }
+  70% {
+    transform: translateZ(-100vh);
+  }
+  80% {
+    transform: scale(8);
+  }
+ 
+  85% {
+    transform: translateZ(-100vh);
+  }
+
+  95% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateZ(300vh);
+  }
+}
+
+.shayari {
+  display: inline-block;
+  white-space: nowrap;
+  animation: slideLeft 10s linear infinite;
+  font-size: 24px;
+  color: #333;
+  direction: rtl; /* To start from right */
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

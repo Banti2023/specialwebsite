@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komal🫀</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('birthday.gif') no-repeat center center fixed; /* Replace with your GIF path */
+            background-size: cover;
+            overflow: hidden;
+        }
+        .gif-container {
+            position: relative;
+            width: 200px; /* Adjust size as needed */
+            height: 200px; /* Adjust size as needed */
+        }
+        .gif-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .fade-out {
+            animation: fadeOut 1s forwards;
+        }
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="gif-container">
+        <img src="clickme.gif" class="gif-image" onclick="handleClick()"> <!-- Replace with your GIF path -->
+    </div>
+
+    <script>
+        function handleClick() {
+            document.body.classList.add('fade-out');
+            setTimeout(function() {
+                window.location.href = "\index1.html"; // Replace with your target URL
+            }, 1000); // Duration of the fade-out animation in milliseconds
+        }
+    </script>
+</body>
+</html>
